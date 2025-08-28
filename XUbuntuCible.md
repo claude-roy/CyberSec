@@ -7,7 +7,7 @@ Vous pouvez utiliser la distribution Ubuntu que vous désirez, j'utilise personn
 Pour la configuration d'une VM XUbuntu cible, vous devez avoir les applications suivantes d'installées :
 
 ```bash
-sudo apt update && sudo apt install ssh git curl firefox wget -y
+sudo apt update && sudo apt install ssh git curl firefox wget neovim -y
 ```  
 Le serveur SSH doit être actif :
 
