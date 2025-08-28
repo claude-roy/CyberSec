@@ -201,7 +201,7 @@ Une fois la base de données créée, vous devrez vous reconnecter.
 
 OWASP a produit quelques applications vulnérables intéressantes : OWASP Juice Shop et OWASP WebGoat.  
 
-Voici les informations pour créer des fichiers Docker Compose pour les lancer. Vous pouvez inclure ces fichiers dans la section ``ìnclude``` du fichier ```compose.yaml```.   
+Voici les informations pour créer des fichiers Docker Compose pour les lancer. Vous pouvez inclure ces fichiers dans la section ```include``` du fichier ```compose.yaml```.   
 
 ### OWASP Juice Shop  
 
