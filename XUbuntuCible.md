@@ -2,7 +2,7 @@
 
 ## Prérequis  
 
-Vous pouvez utiliser la distribution Ubuntu que vous désirez, j'utilise personnellement XUbuntu minimal.  
+Vous pouvez utiliser la distribution Linux que vous désirez, j'utilise personnellement XUbuntu minimal.  
 
 Pour la configuration d'une VM XUbuntu cible, vous devez avoir les applications suivantes d'installées :
 
@@ -197,6 +197,90 @@ Vous devez également configurer la base de données de dvwa.
 
 Une fois la base de données créée, vous devrez vous reconnecter.  
 
+## Applications supplémentaires
+
+OWASP a produit quelques applications vulnérables intéressantes : OWASP Juice Shop et OWASP WebGoat.  
+
+Voici les informations pour créer des fichiers Docker Compose pour les lancer. Vous pouvez inclure ces fichiers dans la section ``ìnclude``` du fichier ```compose.yaml```.   
+
+### OWASP Juice Shop  
+
+Pour lancer OWASP Juice Shop, créer un nouveau fichier pour Docker Compose, ```juice-shop-compose.yaml``` :  
+
+```yaml
+# juice-shop-compose.yaml
+---
+services:
+  juice-shop:
+    image: bkimminich/juice-shop
+    ports:
+      - 3000:3000
+    networks:
+      - juice
+
+networks:
+  juice:
+```  
+
+Pour lancer le conteneur :  
+
+```bash
+docker compose -f juice-shop-compose.yaml up -d
+```  
+Pour accéder à l'application, vous devez ouvrir un navigateur à <http://addresseIP:3000>.  
+
+Pour arrêter et relancer le conteneur :  
+
+```bash
+docker compose -f juice-shop-compose.yaml stop
+docker compose -f juice-shop-compose.yaml start
+``` 
+
+### OWASP WebGoat  
+
+Pour lancer OWASP WebGoat, créer un nouveau fichier pour Docker Compose, ```webgoat-compose.yaml``` :  
+
+```yaml
+# webgoat-compose.yaml
+---
+services:
+  webgoat:
+    image: webgoat/webgoat
+    ports:
+      - 8090:8080
+      - 9090:9090
+    networks:
+      - webgoat
+    environment:
+      TZ: Canada/Eastern
+
+networks:
+  webgoat:
+```  
+ **Attention 1 :** choisissez le fuseau horaire approprié (variable d'environnement TZ) afin que le conteneur Docker et votre hôte soient dans le même fuseau horaire. Ceci est important pour la validité des jetons JWT utilisés dans certains exercices.  
+ **Attention 2 :** le conteneur est un peu capricieux, si la page Web ne s'affiche, arrêter le conteneur et le relancer.
+
+Pour lancer le conteneur :  
+
+```bash
+docker compose -f webgoat-compose.yaml up -d
+```  
+
+Pour accéder à l'application, vous devez ouvrir un navigateur à <http://addresseIP:8090/WebGoat/>.  
+
+Pour arrêter et relancer le conteneur :  
+
+```bash
+docker compose -f webgoat-compose.yaml stop
+docker compose -f webgoat-compose.yaml start
+``` 
+
+Pour arrêter et effacer le conteneur :  
+
+```bash
+docker compose -f webgoat-compose.yaml down
+``` 
+
 ## Références
 
 <https://docs.docker.com/engine/install/ubuntu/>  
@@ -204,3 +288,9 @@ Une fois la base de données créée, vous devrez vous reconnecter.
 <https://owasp.org/www-project-mutillidae-ii/>  
 <https://hub.docker.com/r/sagikazarmark/dvwa>  
 <https://www.youtube.com/watch?v=c1nOSp3nagw>   
+<https://owasp.org/www-project-juice-shop/>  
+<https://hub.docker.com/r/bkimminich/juice-shop>  
+<https://owasp.org/www-project-webgoat/>  
+<https://hub.docker.com/r/webgoat/webgoat>  
+
+
