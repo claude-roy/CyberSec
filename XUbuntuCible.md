@@ -119,6 +119,7 @@ services:
     image: sagikazarmark/dvwa
     ports:
       - 8080:80
+      - 3306:3306
     volumes:
       - dvwadb:/var/lib/mysql
 
