@@ -50,7 +50,7 @@ Vous allez devoir installer Java pour XAMPP. Faire une recherche sur Internet po
 
 **Partage**  
 
-Créez un dossier sur le bureau (Desktop) et activez le partage à tout le monde (Everyone, Full Control) sur ce dossier. Au niveau de l'onglet de Security, ajoutez tout le monde avec le plein contrôle (Everyone, Full Control).
+Créez un dossier sur le bureau (Desktop) et activez le partage à tout le monde (Everyone, Full Control) sur ce dossier. Au niveau de l'onglet de **Security**, ajoutez tout le monde avec le plein contrôle (Everyone, Full Control).
 
 **XAMPP**  
 
