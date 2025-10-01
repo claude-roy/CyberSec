@@ -54,7 +54,7 @@ Créez un dossier sur le bureau (Desktop) et activez le partage à tout le monde
 
 **XAMPP**  
 
-Télécharger XAMPP au lien <https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.2.9/> et l'installer. Ne lancez pas les services. Vous lacerez les services au besoin.    
+Télécharger XAMPP au lien <https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.2.9/> et l'installer. Ne lancez pas les services. Vous lancerez les services au besoin.    
 
 **SNMP**  
 
