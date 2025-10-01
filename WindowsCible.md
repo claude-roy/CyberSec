@@ -91,7 +91,7 @@ Une fois installé, ouvrez le client « Sync Breeze Client », ouvrez les option
 ![Activation du serveur Web de Sync Breeze.](./images/image6.png)  
 **Image 6 : activation du serveur Web de Sync Breeze.**
 
-Allez dans les services, mettre le service Sync Breeze Entreprise à **Manual** et arrêtez le service. Vous lancerez le service au besoin.
+Allez dans les services, mettre le service **Sync Breeze Entreprise** à **Manual** et arrêtez le service. Vous lancerez le service au besoin.
 
 ![Arrêt de Sync Breeze dans les services.](./images/image7.png)  
 **Image 7 : Arrêt de Sync Breeze dans les services.**
