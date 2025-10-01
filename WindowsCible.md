@@ -43,7 +43,7 @@ Vous allez devoir installer Java pour XAMPP. Faire une recherche sur Internet po
 
 **SMB 1.0**  
 
-À partir de **Control Panel-\>Programs-Programs and Features -\> Turn Windows features on or off**, activez tout pour SMB 1.0/CIFS File Sharing Support.  
+À partir de **Control Panel-\>Programs-Programs and Features -\> Turn Windows features on or off**, activez tout pour **SMB 1.0/CIFS File Sharing Support**.  
 
 ![Activer SMB 1.0/CIFS.](./images/image1.png)  
 **Image 1 : activer SMB 1.0/CIFS.**
